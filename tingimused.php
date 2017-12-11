@@ -8,7 +8,7 @@
  * Ülesanne:
  */
 
-
+//header("Refresh:3");
 $vanus = rand(0, 100);
 if($vanus >= 0 and $vanus < 11){
     echo 'Oled laps: '.$vanus.'<br />';
@@ -18,5 +18,19 @@ if($vanus >= 0 and $vanus < 11){
     echo 'Oled täiskasvanu: '.$vanus.'<br />';
 }else {
     echo 'Oled seenior: '.$vanus.'<br />';
+}
+echo '<br />';
+
+//switchi katsetus
+$sokolaad = 'Kalev';
+switch ($sokolaad){
+    case 'Kalev':
+        echo 'Kalevi sokolaad';
+        break;
+    case 'Kinder':
+        echo 'Lastele meeldib';
+        break;
+    default:
+        echo 'Sobib, kui muud pole';
 }
 echo '<br />';
