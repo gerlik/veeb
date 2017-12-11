@@ -4,7 +4,7 @@
  * User: Gerli
  * Date: 11/12/2017
  * Time: 10:17
- * Ülesanne: 6 muutujat
+ * Ülesanne: muutujad
  */
 
 //muutujad
