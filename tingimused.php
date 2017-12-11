@@ -34,3 +34,8 @@ switch ($sokolaad){
         echo 'Sobib, kui muud pole';
 }
 echo '<br />';
+
+//ternary operaator
+$pidu = 'halb';
+$yrr = ($pidu == 'hea') ? 'lähme peole' : 'oleme kodus';
+echo $yrr.'<br />';
