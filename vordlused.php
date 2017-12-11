@@ -70,3 +70,4 @@ echo 'Aine nimetus: ' .AINE_NIMETUS. '<br />';
 echo 'Number: ' .NUMBER . '<br />';
 //suurenduse katsetus
 //NUMBER++;  //ei toimi, konstantide väärtust ei saa muuta
+?>
