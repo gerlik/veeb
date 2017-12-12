@@ -1,2 +1,2 @@
 # veeb
-#PHP ülesanded
+# erinevad PHP ülesanded 
