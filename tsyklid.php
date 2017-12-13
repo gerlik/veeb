@@ -11,6 +11,10 @@ for ($i = 1; $kord <= 10; $kord++){
     }else {
         $varv = 'blue';
     }
+    //värvi defineerimine
+//    if($varv == 'blue'){
+//        continue;
+//    }
     echo '<font color="'.$varv.'">'.$kord.'</font><br />';
     //echo $kord.'<br />';
 }
