@@ -5,6 +5,8 @@
  * Date: 13/12/2017
  * Time: 14:12
  */
+
+//for
 for ($i = 1; $kord <= 10; $kord++){
     if($kord % 2 == 0){
         $varv = 'red';
@@ -15,10 +17,20 @@ for ($i = 1; $kord <= 10; $kord++){
     echo '<font color="'.$varv.'">'.$kord.'</font><br />';
 }
 
+//while
 echo '<br />';
-$kord = 1;
+echo '<hr />';
+$kord = 11;
 while ($kord <= 10){
     echo '<i>'.$kord.'</i><br />';
     $kord++;
 
 }
+
+//do-while
+echo '<hr />';
+$kord = 11;
+do {
+    echo '<b>'.$kord.'</b><br />';
+    $kord++;
+}while($kord <= 10);
