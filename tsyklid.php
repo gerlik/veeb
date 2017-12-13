@@ -7,7 +7,7 @@
  */
 
 //for
-for ($i = 1; $kord <= 10; $kord++){
+for ($kord = 1; $kord <= 10; $kord++){
     if($kord % 2 == 0){
         $varv = 'red';
         break;
@@ -34,3 +34,4 @@ do {
     echo '<b>'.$kord.'</b><br />';
     $kord++;
 }while($kord <= 10);
+
