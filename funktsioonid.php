@@ -9,6 +9,8 @@
 
 //funktsioon looTabel - tabeli loomine, parameetrid: ridade arv, veergude arv
 //sisu: juhuslikud arvud, vahemik 10-99
+//automaatne refresh
+//header("Refresh:0.2");
 function looTabel($ridadeArv,$veergudeArv){
     echo '<table border="1">';
     for ($reaNr = 1; $reaNr <= $ridadeArv; $reaNr++){
@@ -36,3 +38,24 @@ function genereeriVarv(){
     return $varv;
 }
 genereeriVarv();
+
+//funktsioon tabelTekst
+//parameetrid: 4 sõna
+//väljastan 4realise tabeli, mille pesades parameetrid
+
+echo '<hr >';
+function tabelTekst($sona1, $sona2, $sona3, $sona4){
+    $sonad = array($sona1,$sona2,$sona3,$sona4);
+    echo '<table border="1">';
+    for ($reaNr = 0; $reaNr <= 3; $reaNr++){
+        echo '<tr>';
+            echo '<td>';
+                echo $sonad[$reaNr];
+                //või, ja muuta tsüklipäises $reaNr = 1 ja $reaNr <= 4
+                //echo ${'sona'.$reaNr};
+            echo '</td>';
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+tabelTekst('see', 'on', 'väike', 'tabel');
