@@ -6,20 +6,16 @@
  * Time: 12:02
  */
 
-//fn nimega arvuSumma, parameeter suvaline nr
-//$sum = $sum + $arv % 10;
+//fn nimega arvuSumma, parameeter suvaline nr;
 function arvuSumma($number){
     $summa = 0;
     while ($number != 0){
         $arv = $number % 10;
-        echo 'arv = '.$arv.'<br />';
+        $summa = $summa +$arv;
         $number = $number / 10;
-        echo 'number = '.$number.'<br / >';
         settype($number, 'integer');
-        echo 'number = '.$number.'<br />';
     }
+    return $summa;
 }
-$nr = rand(11,14515);
-arvuSumma($nr);
-echo '<br />';
-//echo 'Arvu '.$nr.' ristsumma on '.$summa;
+$number = rand(11,14515);
+echo 'Arvu '.$number.' ristsumma on '.arvuSumma($number).'<br />';
