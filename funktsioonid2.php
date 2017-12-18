@@ -17,5 +17,7 @@ function arvuSumma($number){
     }
     return $summa;
 }
-$number = rand(11,14515);
-echo 'Arvu '.$number.' ristsumma on '.arvuSumma($number).'<br />';
+for ($kord = 1; $kord <= 5; $kord++){
+    $number = rand(11,1795);
+    echo 'Arvu '.$number.' ristsumma on '.arvuSumma($number).'<br />';
+}
