@@ -46,3 +46,11 @@ echo '<pre>';
 print_r($opilased);
 echo '</pre>';
 echo '<hr />';
+
+foreach ($opilased as $opilane){
+    foreach ($opilane as $voti => $vaartus){
+        echo $voti.' - '.$vaartus.'<br />';
+    }
+    echo '--------'.'<br />';
+};
+echo '<hr />';
