@@ -14,7 +14,20 @@ function raamatuVorm(){
             Trükikoda: <input type="text" name="print"><br />
             Seisund: <input type="text" name="status"><br />
             <input type="submit" value="Salvesta!">
-        </form>
-        
+        </form>  
     ';
+}
+//Salvestab raamatud faili
+function salvestaRaamat($raamat, $fail){
+    if (file_exists($fail) and is_file($fail) and is_writable($fail)){
+        $failpointer = fopen($fail, 'a') or die('Probleem faili avamisega');
+        foreach ($raamat as $element){
+            fwrite($failpointer, $element."\n");
+        }
+        fwrite($failpointer, "-----\n");
+        fclose($failpointer);
+        echo 'Andmed on sisestatud<br />';
+    }else{
+        echo 'Probleem failiga '.$fail.'<br />';
+    }
 }
