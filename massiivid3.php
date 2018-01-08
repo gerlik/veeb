@@ -64,3 +64,26 @@ foreach ($opilased as $opilane){
     echo '--------'.'<br />';
 };
 echo '<hr />';
+
+//asort_tähestikujäjrekorras, arsort_vastupidi
+echo 'asort:'.'<br />';
+foreach ($opilased as $opilane){
+    asort($opilane);
+    foreach ($opilane as $voti => $vaartus){
+        echo $voti.' - '.$vaartus.'<br />';
+    }
+    echo '--------'.'<br />';
+};
+echo '<hr />';
+
+//ksort
+echo 'ksort:'.'<br />';
+foreach ($opilased as $opilane){
+    ksort($opilane);
+    foreach ($opilane as $voti => $vaartus){
+        echo $voti.' - '.$vaartus.'<br />';
+    }
+    echo '--------'.'<br />';
+};
+echo '<hr />';
+
