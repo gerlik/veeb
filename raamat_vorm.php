@@ -17,6 +17,21 @@ function raamatuVorm(){
         </form>  
     ';
 }
+
+function loeVormist(){
+    raamatuVorm();
+    $raamat = array();
+    if(count($_POST) > 0){
+        foreach ($_POST as $voti => $vaartus){
+            if(strlen($vaartus) == 0){
+                echo 'Kõik väljad peavad olema täidetud<br />';
+                exit;
+            }
+            $raamat[$voti] = $vaartus;
+        }
+    }
+    return $raamat;
+};
 //Salvestab raamatud faili
 function salvestaRaamat($raamat, $fail){
     if (file_exists($fail) and is_file($fail) and is_writable($fail)){
@@ -31,3 +46,27 @@ function salvestaRaamat($raamat, $fail){
         echo 'Probleem failiga '.$fail.'<br />';
     }
 }
+
+function loeAndmed($fail){
+    if (file_exists($fail) and is_file($fail) and is_readable($fail)) {
+        $fail = fopen($fail, 'r');
+        echo '<table border="1">';
+            echo '<tr>';
+                echo '<th>Pealkiri</th>';
+                echo '<th>Autor</th>';
+                echo '<th>Trükikoda</th>';
+                echo '<th>Seisund</th>';
+            echo '</tr>';
+            echo '<tr>';
+            while (! feof($fail)){
+                $rida = fgets($fail);
+                if ($rida != "-----\n"){
+                    echo '<td>'.$rida.'</td>';
+                }else {
+                    echo '</tr>';
+                }
+            }
+            echo '</table>';
+            fclose($fail);
+    }
+};

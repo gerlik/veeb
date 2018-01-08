@@ -8,11 +8,13 @@
 
 require_once 'raamat_vorm.php';
 
-raamatuVorm();
+/*raamatuVorm();
 $raamat = array(
     'title' => 'Valgus ja varjud',
     'author' => 'Tulihobu',
     'print' => 'Hea tegu',
     'status' => 'olemas'
-);
+);*/
+$raamat = loeVormist();
 salvestaRaamat($raamat, raamatud.txt);
+loeAndmed('raamatud.txt');
