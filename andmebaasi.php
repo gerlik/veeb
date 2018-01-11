@@ -9,7 +9,7 @@
 error_reporting(E_ALL);
 
 $yhendus = mysqli_connect('localhost', 'usr',
-    'password', 'db');
+    'pw', 'db');
 
 if(!$yhendus){
     echo 'Probleem ühendusega';
