@@ -8,11 +8,26 @@
 
 class tabel
 {
-    //klassi mutujad
+    //klassi muutujad
     var $tabeliSisu = array();
     var $pealkirjad = array();
-    var $veergufdearv;
-    //
+    var $veergudearv;
+
+    //klassi meetodid
+    /**
+     * tabel constructor.
+     * @param array $pealkirjad
+     */
+    public function __construct(array $pealkirjad)
+    {
+        $this->pealkirjad = $pealkirjad;
+        $this->veergudearv = count($pealkirjad);
+    }
+    function lisaRida($rida){
+        if(count($rida) != $this->veergudearv){
+            return false;
+        }
+    }
 
 }
 
