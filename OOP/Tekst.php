@@ -19,14 +19,11 @@ class Tekst
     {
         $this->määraTekst($s);
     }
-    //klassi tegevused
-    //klassi meetod
-    //klassi konstruktor
-
     //teksti määramine
     function määraTekst($s){
         $this->sone = $s;
     }
+    //teksti väljastamine
     function prindiTekst(){
         echo $this->sone.'<br />';
     }
