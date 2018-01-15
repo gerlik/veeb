@@ -12,7 +12,7 @@ require_once 'Tekst.php';
 
 $minuTekst = new Tekst();
 //väärtustame sõne muutjuja
-$minuTekst->sone = 'Hello world!';
+$minuTekst->määraTekst('Hello wolrd!');
 //tesotame testvaate entud objektist
 echo '<pre>';
 print_r($minuTekst);
