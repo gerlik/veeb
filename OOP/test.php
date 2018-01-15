@@ -9,10 +9,7 @@
 require_once 'Tekst.php';
 
 //loome reaalse objekti tekst.klassi abil
-
-$minuTekst = new Tekst();
-//väärtustame sõne muutjuja
-$minuTekst->määraTekst('Hello wolrd!');
+$minuTekst = new Tekst('Tere maailm!');
 //tesotame testvaate entud objektist
 echo '<pre>';
 print_r($minuTekst);
