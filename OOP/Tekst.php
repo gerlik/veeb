@@ -27,4 +27,7 @@ class Tekst
     function määraTekst($s){
         $this->sone = $s;
     }
+    function prindiTekst(){
+        echo $this->sone.'<br />';
+    }
 }
