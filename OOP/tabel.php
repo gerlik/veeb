@@ -27,6 +27,32 @@ class tabel
         if(count($rida) != $this->veergudearv){
             return false;
         }
+        array_push($this->tabeliSisu, $rida);
+        return true;
+    }
+    /*funktsioon lisaReaKirjeldusega*/
+    function lisaReaKirjeldusega($ridadeKirjeldus){
+        $rida = array();
+        foreach($this->pealkirjad as $pealkiri){
+            $rida[] = $ridaKirjeldusega[$pealkiri];
+        }
+        array_push($this->tabeliSisu, $rida);
+        return true;
+        }
+    }
+    function prindiTabel(){
+        echo '<pre>';
+        foreach ($this->pealkirjad as $pealkiri){
+            echo '<b>'.$pealkiri.'</b>'.' ';
+        }
+        echo "\n";
+        foreach ($this->tabeliSisu as $rida){
+            foreach ($rida as $reaElement){
+                echo $reaElement.' ';
+            }
+            echo "\n";
+    }
+    echo '</pre>';
     }
 
 }
