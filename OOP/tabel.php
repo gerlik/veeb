@@ -34,12 +34,12 @@ class tabel
     function lisaReaKirjeldusega($ridadeKirjeldus){
         $rida = array();
         foreach($this->pealkirjad as $pealkiri){
-            $rida[] = $ridaKirjeldusega[$pealkiri];
+            $rida[] = $ridadeKirjeldus[$pealkiri];
         }
         array_push($this->tabeliSisu, $rida);
         return true;
         }
-    }
+
     function prindiTabel(){
         echo '<pre>';
         foreach ($this->pealkirjad as $pealkiri){

@@ -7,6 +7,7 @@
  */
 
 require_once 'Tekst.php';
+require_once 'vtekst.php';
 
 //loome reaalse objekti tekst.klassi abil
 $minuTekst = new Tekst('Tere maailm!');
@@ -16,3 +17,11 @@ print_r($minuTekst);
 echo '</pre>';
 //väljastus, objekti sone
 $minuTekst->prindiTekst();
+echo '<hr />';
+//loome reaalse objekti vtekst abil
+$punaneTekst = new vtekst('Punane tekst', '#FF0000');
+echo '<pre>';
+print_r($punaneTekst);
+echo '</pre>';
+//väljastus, objekti sone
+$punaneTekst->prindiTekst();
